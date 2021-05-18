@@ -1,0 +1,34 @@
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="coming-soon.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+<script src="assets/shuffle-text.js"></script>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/js.js"></script>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<a href="#" class="neon-button">Coming soon 
+    <span id="wait">.</span>
+
+    <script>
+        window.dotsGoingUp = true;
+        var dots = window.setInterval( function() 
+        {
+            var wait = document.getElementById("wait");
+            if ( window.dotsGoingUp ) 
+                wait.innerHTML += ".";
+            else {
+                wait.innerHTML = wait.innerHTML.substring(1, wait.innerHTML.length);
+                if ( wait.innerHTML === "")
+                    window.dotsGoingUp = true;
+            }
+            if ( wait.innerHTML.length > 3 )
+                window.dotsGoingUp = false;
+        }, 400);
+    </script>
+</a>
+
+
+
